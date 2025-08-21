@@ -4,8 +4,9 @@
 #print는 문자열을 출력하는 함수
 #함수란? 파이썬에서 제공하는 기능
 
+print("A")
 print("Hello, World!")
-print('Hello, World!')
-print("대한민국을 빛낼 프로그래밍 입문서!")
 print("혼자 공부하는 첫 프로그래밍!")
+
+print('안녕하세요')
 print('323')

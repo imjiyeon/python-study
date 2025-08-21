@@ -1,7 +1,15 @@
-#비교연산자와 논리연산자
+#논리연산자
 
-age = 20
-money = 10000
-print(age > 19)
-print(money >= 25000)
-print(age >= 19 and money >= 25000)
+#논리연산자로 조건식 만들기
+print(True and True) #양쪽 모두 참
+print(True and False)  
+
+print(True or False) #한쪽만 참이어도 참
+print(False or False)
+
+print(not True) # 반대로 바뀜
+print(not False) 
+
+print((5 > 0) and (10 > 0))
+print((5 > 0) or (10 > 0))
+print(not(5 > 0))
