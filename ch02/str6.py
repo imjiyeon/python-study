@@ -20,3 +20,7 @@ print(repr("   Hello World   ".strip()))
 print(repr("   Hello World   ".lstrip()))
 #오른쪽 공백 제거
 print(repr("   Hello World   ".rstrip()))
+
+# title: 첫글자를 대문자로 바꾸는 함수
+text = "hello world from python"
+print(text.title())

@@ -10,8 +10,8 @@ keys = dic.keys()
 print(keys, type(keys))
 
 # 객체 -> 리스트 변환
-list = list(keys)
-print(list, type(list))
+lis = list(keys)
+print(lis, type(lis))
 
 # value 리스트 만들기
 values = dic.values()

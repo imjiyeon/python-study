@@ -22,3 +22,13 @@ print(abs(-1.2))
 # enumerate : 인덱스 + 값
 for i, name in enumerate(['body', 'foo', 'bar']):
     print(i, name)
+
+# zip : 리스트나 튜플을 하나로 묶어주는 함수
+seq1 = ["foo", "bar", "baz"]
+seq2 = ["one", "two", "three"]
+print(zip(seq1, seq2)) # iterator 반환
+print(list(zip(seq1, seq2)))
+
+seq3 = [False, True]
+list(zip(seq1, seq2, seq3))
+print(list(zip(seq1, seq2, seq3)))

@@ -9,3 +9,15 @@ def say_nick(nick):
 
 say_nick("야호")
 say_nick("바보")
+
+
+# 파이썬 함수는 사실 하나의 값만 반환 가능하다
+# return에 여러 개를 쓰면 자동으로 '튜플'로 묶어서 반환한다
+def f():
+    a = 5
+    b = 6
+    c = 7
+    return a, b, c   # 튜플 반환
+
+t = f()
+print(t) 

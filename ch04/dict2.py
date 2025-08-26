@@ -9,3 +9,7 @@ del students[1]
 
 # 딕셔너리에서 key를 사용해 value 꺼내기
 print(students[2])
+
+# 모든 값 출력하기
+for key in students:
+    print(students[key])

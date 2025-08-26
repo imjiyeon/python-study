@@ -11,3 +11,8 @@ print(iter([1, 2, 3]))
 
 # 정수는 iterable이 아니므로 에러남
 # print(iter(5))
+
+# 이터레이터로 값을 하나씩 꺼낼 수 있다
+it = iter([1, 2, 3])
+for v in it:
+    print(v)

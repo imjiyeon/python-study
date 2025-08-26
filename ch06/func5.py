@@ -1,4 +1,4 @@
-# 키워드 매개변수 **kwargs
+# 나머지 매개변수 **kwargs
 # 전달받은 인자를 모아 딕셔너리를 만든다
 # 인자는 반드시 쌍으로 전달해야 한다
 
@@ -10,3 +10,9 @@ def print_kwargs(**kwargs):
 
 print_kwargs(a=1)
 print_kwargs(name='foo', age=3)
+
+# 매개변수 이름은 마음대로 작성해도됨
+def func(**rest):
+    print(rest)
+
+func(name='둘리', age=20)

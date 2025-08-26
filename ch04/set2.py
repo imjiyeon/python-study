@@ -4,9 +4,9 @@
 # 인덱스를 사용하고 싶으면 set을 리스트나 튜플로 변환한다
 s1 = set([1, 2, 3])
 # 리스트로 변환
-list = list(s1)
-print(list)      # [1, 2, 3]
-print(list[0])   # 1
+lis = list(s1)
+print(lis)      # [1, 2, 3]
+print(lis[0])   # 1
 
 # 튜플로 변환
 tuple = tuple(s1)
