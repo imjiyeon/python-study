@@ -1,16 +1,27 @@
-#문자열 자르기
-#문자데이터[시작위치:끝위치]
+#문자열 교체 함수: replace
 
-print("KE901"[0:2])
-print("KE901"[2:5])
-print("KE901"[2:100])
-print("KE901"[2:])
-print("KE901"[:2])
-print("KE901"[:])
+#첫번째인자: 교체대상
+#두번째인자: 새로운문자
 
+# replace 함수를 사용하여 문자 변경
+print("banana".replace("a", "o"))
 
-print("010-1234-5678")
-print("010-1234-5678"[:3])
-print("010-1234-5678"[4:8])
-print("010-1234-5678"[9:])
-print("010-1234-5678"[:3] + "010-1234-5678"[4:8] + "010-1234-5678"[9:])
+#replace 함수를 사용하여 -하이픈 제거
+print("010-1234-5678".replace("-", ""))
+
+#양쪽에 작은따음표 표시: repr
+print(repr("   Hello World   "))
+
+#문자열 공백제거 함수들
+
+#양옆 공백 제거
+print(repr("   Hello World   ".strip()))
+#왼쪽 공백 제거
+print(repr("   Hello World   ".lstrip()))
+#오른쪽 공백 제거
+print(repr("   Hello World   ".rstrip()))
+
+# title: 첫글자를 대문자로 바꾸는 함수
+text = "hello world"
+print(text.title())
+

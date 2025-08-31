@@ -1,9 +1,9 @@
-#문자열 인덱싱
-#문자열[인덱스]
-#인덱스번호: 0부터시작 ~ 문자열길이-1
+#f-string
 
-print("Hello"[0])
-print("Hello"[1])
-print("Hello"[2])
-print("Hello"[3])
-print("Hello"[4])
+#문자열 앞에 f 또는 F
+#중괄호{}안에 변수 넣기
+
+name='둘리'
+age=20
+
+print(f"{name}님의 나이는 {age}입니다.")

@@ -1,4 +1,4 @@
-#논리데이터/불형
+#논리데이터
 
 #bool값: True(참) False(거짓)
 a=True
