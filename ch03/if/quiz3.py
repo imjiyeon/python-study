@@ -16,3 +16,19 @@ elif animal == 'd':
     print("dog")
 else:
     print("none")
+
+
+time = 10
+
+if time < 9:
+    print("출근 준비")
+elif time < 12:
+    print("오전 업무")
+elif time < 13:
+    print("점심 식사")
+elif time < 18:
+    print("오후 업무")
+elif time < 21:
+    print("야근 중")
+else:
+    print("퇴근 후 휴식")
