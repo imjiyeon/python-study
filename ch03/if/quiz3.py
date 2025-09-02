@@ -18,17 +18,42 @@ else:
     print("none")
 
 
+# 변수를 선언하고 시간을 입력하세요
+# 시간에 따라 할일을 출력하세요
+#
+# 9시 - 출근
+# 10시 - 회의
+# 11시 - 서류 정리
+# 12시 - 점심 식사
+# 그외 시간 - 휴식
+
 time = 10
 
-if time < 9:
-    print("출근 준비")
+if time == 9:
+    print("출근")
+elif time == 10:
+    print("회의")
+elif time == 11:
+    print("서류 정리")
 elif time < 12:
-    print("오전 업무")
-elif time < 13:
     print("점심 식사")
-elif time < 18:
-    print("오후 업무")
-elif time < 21:
-    print("야근 중")
 else:
-    print("퇴근 후 휴식")
+    print("휴식")
+
+
+# 변수를 선언하고 'b', 't', 'c' 중 하나를 입력하세요
+# 문자에 해당하는 교통수단을 출력하세요
+#
+# b - 버스
+# t - 지하철
+# c - 자전거
+transport = "t"
+
+if transport == "b":
+    print("버스")
+elif transport == "t":
+    print("지하철")
+elif transport == "c":
+    print("자전거")
+else:
+    print("도보")
