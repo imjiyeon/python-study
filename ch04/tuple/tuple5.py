@@ -10,8 +10,7 @@ print(a, b)
 b, a = a, b
 print(a, b)
 
-# 나머지 값 *rest
-# 나머지 값을 리스트에 담는다
-values = 1, 2, 3, 4, 5
+# *rest : 나머지 값을 모아서 리스트에 담기
+values = (1, 2, 3, 4, 5)
 a, b, *rest = values
 print(a, b, rest)
