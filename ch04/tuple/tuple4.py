@@ -1,14 +1,16 @@
-# 형변환
-# 리스트나 문자열을 튜플로 변환할 수 있다
+# 튜플 값 분리하기
+t1 = (4, 5, 6)
+a, b, c = t1
+print(a, b, c)
 
-# list -> tuple
-t1 = tuple([4, 0, 2])
-print(t1, type(t1))
+# 변수 값 교환하기
+a, b = 1, 2
+print(a, b)
 
-# string -> tuple
-t2 = tuple('string')
-print(t2, type(t2))
+b, a = a, b
+print(a, b)
 
-# tuple -> list
-tup = (1, 2, 3)
-print(list(tup))
+# *rest : 나머지 값을 모아서 리스트에 담기
+values = (1, 2, 3, 4, 5)
+a, b, *rest = values
+print(a, b, rest)
