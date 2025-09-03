@@ -2,10 +2,6 @@
 
 lis = [1,2,3]
 
-# 리스트 길이 확인
-length = len(lis)
-print(length)
-
 # append : 새로운 요소를 맨뒤에 추가
 lis.append(4)
 print(lis)
@@ -30,3 +26,8 @@ print(lis)
 # pop : 마지막 요소 꺼내면서 삭제
 last = lis.pop()
 print(lis, last)
+
+
+# 리스트 길이 확인
+length = len(lis)
+print(length)
