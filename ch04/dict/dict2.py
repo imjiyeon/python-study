@@ -1,15 +1,13 @@
-# 학생 딕셔너리 생성
-students = {1: "둘리", 2: "도우너", 3: "또치"}
+# 주의사항
 
-# 딕셔너리 쌍 추가
-students[4] = '고길동'
+# key는 중복 불가
+# key가 중복되면 마지막 요소를 제외한 나머지는 무시
+a = { 1: 'a', 1: 'b' }
+print(a)
 
-# 딕셔너리 요소 삭제
-del students[1]
-
-# 딕셔너리에서 key를 사용해 value 꺼내기
-print(students[2])
-
-# 모든 값 출력하기
-for key in students:
-    print(students[key])
+# 정수,실수,문자열,튜플 -> 가능
+# 리스트,딕셔너리,set  -> 불가능
+# 딕셔너리 키는 변경 불가능한 것만 가능함
+dic = {
+    [1, 2]: 'abc'
+}

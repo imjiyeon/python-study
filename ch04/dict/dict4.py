@@ -1,38 +1,33 @@
-# 딕셔너리 관련 함수
+# import : 모듈을 불러오는 것
+# 모듈 : 특정 기능을 미리 만들어둔 파이썬 파일
+import copy
 
-dic = {'name': '둘리', 'phone': '010-1234-5678', 'birth': '0222'}
+# 얇은 복사와 깊은 복사의 차이
 
-# key 리스트 만들기
-keys = dic.keys()
+# 객체 복사하기 (얇은 복사)
+dic = {'name': '둘리', 'age': 10}
+dic_copy = dic.copy()
 
-# dict_keys 객체 리턴
-# dict_keys 객체는 리스트와 달리 append, insert, remove, sort 함수를 사용할 수 없다
-print(keys, type(keys))
+# 복사본을 수정하면 원본은 영향 없음
+dic_copy['age'] = 20
+print("원본:", dic)
+print("복사본:", dic_copy)
 
-# 객체 -> 리스트 변환
-lis = list(keys)
-print(lis, type(lis))
+# 복잡한 객체 복사하기
+dic = {'name': '둘리', 'age': 10, 'hobby': ['축구','야구']}
+dic_copy = dic.copy()
 
-# value 리스트 만들기
-values = dic.values()
+# 복사복을 수정하면 원본도 함께 수정됨
+# 이유는 hobby는 리스트이고, 리스트의 값이 아니라 주소가 복사됨
+# 따라서 원본의 hobby와 복사본의 hobby가 같은 리스트를 바라보게됨
+dic_copy['hobby'][0] = '테니스'
+print("원본:", dic)
+print("복사본:", dic_copy)
 
-# dict_values 객체 리턴
-print(values, type(values))
+# 객체를 완벽하게 복사하기 위해 deepcopy 함수를 사용
+dic = {'name': '둘리', 'age': 10, 'hobby': ['축구','야구']}
+dic_deep = copy.deepcopy(dic)
 
-# key,value 쌍 리스트 만들기
-items = dic.items()
-print(items, type(items))
-
-# 딕셔너리의 모든 요소 지우기
-dic.clear()
-print(dic)
-
-# key로 value 꺼내기
-dic = {'name': '둘리', 'phone': '010-1234-5678', 'birth': '0222'}
-print(dic.get('name'))
-print(dic.get('phone'))
-print(dic['birth'])
-
-# 해당 key가 딕셔너리 안에 있는지 조사하기
-print('name' in dic)
-print('email' in dic)
+dic_deep['hobby'][0] = '테니스'
+print("원본:", dic) 
+print("복사본:", dic_deep)
