@@ -1,14 +1,14 @@
-# 변수n을 선언하고 숫자를 대입하세요
-# n의 크기만큼 *별을 출력하세요
-# n=5 -> *****
+# 다음과 같이 리스트를 만들고 
+# for문으로 모든 요소를 더해서 합을 구하세요
+nums = [10, 20, 30, 40, 50]
+total = 0
+for n in nums:
+    total += n
+print("합:", total)
 
-n = 5
-str = ''
-for i in range(n):
-    str = str+'*'
-print(str)    
-
-# 구구단 3단을 출력하세요
-for i in range(1, 10):
-    print(f"3 x {i} = {3*i}")
-
+# 1부터 100까지 숫자 중에서 3의 배수의 합을 구하세요
+total = 0
+for i in range(1, 101):
+    if i % 3 == 0:
+        total += i
+print("3의 배수 합:", total)
