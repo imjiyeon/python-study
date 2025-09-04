@@ -21,9 +21,6 @@ def add(a, b):
 
 add(3, 4)
 
-a = add(3, 4)
-print(a)
-
 # 입력값 없고, 리턴값도 없는 함수
 def say():
     print('Hi')

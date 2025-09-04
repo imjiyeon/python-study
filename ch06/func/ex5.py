@@ -4,15 +4,10 @@
 
 # 함수에서 매개변수의 개수를 유연하게 받고 싶을 때 사용한다
 # kwargs를 사용하면 매개변수를 여러개 받을 수 있다
+# 매개변수 이름은 자유롭게 정할수 있다
 
-def print_kwargs(**kwargs):
+def func(**kwargs):
     print(kwargs)
 
-print_kwargs(a=1)
-print_kwargs(name='foo', age=3)
-
-# 매개변수 이름은 마음대로 작성해도됨
-def func(**rest):
-    print(rest)
-
-func(name='둘리', age=20)
+func(a=1)
+func(name='foo', age=3)
