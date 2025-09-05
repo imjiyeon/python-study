@@ -6,6 +6,7 @@ for n in nums:
     total += n
 print("합:", total)
 
+# for문을 사용해서
 # 1부터 100까지 숫자 중에서 3의 배수의 합을 구하세요
 total = 0
 for i in range(1, 101):
