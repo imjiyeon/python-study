@@ -1,13 +1,10 @@
-# 파일에 새로운 내용 추가하기
+# 파일 쓰기 모드로 열기
 
-# a: 추가 모드
-f = open("D:/workspace/python-study/ch06/새파일.txt", 'a', encoding="utf-8")
-for i in range(11, 20):
-    data = f"{i}번째 줄입니다.\n"
-    f.write(data)
+# 한글 입력시 인코딩 설정해야함
+f = open("file2.txt", 'w', encoding="utf-8")
+
+for i in range(1, 11):
+    # 한글 쓰기 -> 깨짐
+    f.write(f"{i}번째 줄입니다\n")
+
 f.close()
-
-# with문 사용하기
-# 자동 close
-with open("new.txt", "w") as f:
-    f.write("hello, world!")

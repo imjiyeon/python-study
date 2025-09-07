@@ -1,15 +1,15 @@
-# 파일 읽기
+# 파일 쓰기 모드로 열기
 
-# r: 읽기 모드
-# readlines: 파일 내용을 줄 단위로 읽어 리스트로 반환
-f = open("D:/workspace/python-study/ch06/새파일.txt", 'r', encoding="utf-8")
-lines = f.readlines()
-for line in lines:
-    print(line)
+# 'w' : 파일이 이미 있으면 덮어씀
+f = open("file1.txt", 'w')
+
+# 파일에 1부터 11까지 쓰기
+for i in range(1, 11):
+    # f.write(i) # 에러남. write는 문자열로 입력 가능. 숫자x
+    # f.write(str(i)) # int->str
+    # # 줄바꿈 없이 이어짐
+    f.write(f"{i}\n") # 줄바꿈 추가
+
 f.close()
 
-# read: 파일의 내용을 하나의 문자열로 반환
-f = open("D:/workspace/python-study/ch06/새파일.txt", 'r', encoding="utf-8")
-data = f.read()
-print(data)
-f.close()
+
