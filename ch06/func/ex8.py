@@ -12,5 +12,4 @@ print(a) # 여전히 1
 def func2(b):
     b = b + 1
 
-func2(3)
 # print(b) # 에러남
