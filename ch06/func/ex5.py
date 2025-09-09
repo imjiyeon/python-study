@@ -11,3 +11,13 @@ def func(**kwargs):
 
 func(a=1)
 func(name='foo', age=3)
+
+# 사람의 정보를 모두 출력하기
+def info(**kwargs):
+    for key, value in kwargs.items():          
+        print(key,':',value)
+        
+info(name="둘리", age=10, city="서울")
+# name: 둘리
+# age: 10
+# city: 서울
