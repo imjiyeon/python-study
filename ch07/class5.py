@@ -1,7 +1,4 @@
-# 메소드 오버라이딩
-
-# 부모가 물려준 메소드가 자식의 비즈니스와 맞지 않을 때
-# 재정의하여 사용한다
+# 상속받고 자식 클래스 확장
 
 # 부모 클래스
 class Person:
@@ -10,11 +7,29 @@ class Person:
 
 # 자식 클래스
 class Student(Person):
-    def info(self):
-        print("안녕하세요, 저는 학생입니다.")
+    def study(self):
+        print("공부를 합니다.")
 
 # 객체 생성
 s1 = Student()
 
-# 부모가 물려준 메소드 호출
-s1.info()   # 실제로는 자식 클래스에서 오버라이딩된 메서드가 실행됨
+# 부모가 물려준 메소드 사용
+s1.info()   
+
+# 자식 클래스에서 확장한 메서드 사용
+s1.study()
+
+# Person을 상속받는 두번째 자식 클래스
+# 자식 클래스 Teacher
+class Teacher(Person):
+    def teach(self):
+        print("학생을 가르칩니다.")
+
+# 객체 생성
+t1 = Teacher()
+
+# 부모가 물려준 메소드 사용
+t1.info()
+
+# 자식 클래스 확장 메서드 사용
+t1.teach()
