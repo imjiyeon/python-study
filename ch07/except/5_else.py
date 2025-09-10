@@ -1,4 +1,6 @@
-# 오류가 발생하면 exept, 오류가 발생하지 않으면 else가 실행된다
+# try-except-else 구조
+# - 오류가 발생하면 except 실행
+# - 오류가 발생하지 않으면 else 실행
 
 try:
     age = int(input("나이를 입력하세요: "))
