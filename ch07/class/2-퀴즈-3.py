@@ -1,28 +1,32 @@
 # 응용
 
-# Bus 클래스를 정의하고, 노선번호·승객수를 속성으로 넣어주세요
-# 같은 버스에 승객을 여러 번 태우면 누적 인원이 합산됩니다
+# Subway 클래스를 정의하고, 노선이름·승객수·요금을 속성으로 넣어주세요
+# 승객이 탑승할 때마다 인원수가 누적되고 요금도 합산됩니다
+# 1인당 요금: 1500원
 # 실행 결과:
-# 9번 버스에 승객 10명이 탑승했습니다. (총 10명)
-# 9번 버스에 승객 5명이 탑승했습니다. (총 15명)
-# 111번 버스에 승객 3명이 탑승했습니다. (총 3명)
-# 111번 버스에 승객 6명이 탑승했습니다. (총 6명)
+# 2호선에 승객 5명이 탑승했습니다. (총 5명, 요금 7500원)
+# 2호선에 승객 3명이 탑승했습니다. (총 8명, 요금 12000원)
+# 9호선에 승객 10명이 탑승했습니다. (총 10명, 요금 15000원)
+# 9호선에 승객 4명이 탑승했습니다. (총 14명, 요금 21000원)
 
-class Bus:
-    def __init__(self, route):
-        self.route = route
-        self.passengers = 0   # 처음 승객 수는 0명
+class Subway:
+    def __init__(self, line, fare=1500):
+        self.line = line
+        self.fare = fare         # 1인당 기본 요금
+        self.passengers = 0      # 승객 수
+        self.total_fare = 0      # 누적 요금
 
     def take(self, num):
         self.passengers += num
-        print(f"{self.route}번 버스에 승객 {num}명이 탑승했습니다. (총 {self.passengers}명)")
+        self.total_fare += num * self.fare
+        print(f"{self.line}에 승객 {num}명이 탑승했습니다. (총 {self.passengers}명, 요금 {self.total_fare}원)")
 
-# 첫 번째 버스
-b1 = Bus("9")
-b1.take(10)   # 승객 10명 탑승
-b1.take(5)    # 승객 5명 추가 탑승
+# 첫 번째 지하철
+s1 = Subway("2호선")
+s1.take(5)   # 승객 5명
+s1.take(3)   # 승객 3명 추가
 
-# 두 번째 버스
-b2 = Bus("111")
-b1.take(3)   # 승객 3명 탑승
-b1.take(6)    # 승객 6명 추가 탑승
+# 두 번째 지하철
+s2 = Subway("9호선")
+s2.take(10)  # 승객 10명
+s2.take(4)   # 승객 4명 추가
