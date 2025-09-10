@@ -9,10 +9,10 @@ def generate_order_no():
 
 # 주문번호는 생성
 # 나머지는 입력받은 그대로
-def create_order(customer, product, count, price):
+def create_order(name, product, count, price):
     order = {
         "order_no": generate_order_no(),
-        "customer": customer,
+        "name": name,
         "product": product,
         "count": int(count),
         "price": int(price)
@@ -27,7 +27,7 @@ def list_all():
             total = o["count"] * o["price"]
             print(
                 "주문번호:", o["order_no"],
-                "고객명:", o["customer"],
+                "고객명:", o["name"],
                 "제품명:", o["product"],
                 "수량:", o["count"],
                 "단가:", o["price"],
@@ -37,14 +37,14 @@ def list_all():
 def count_by_customer(name):
     count = 0
     for o in orders:
-        if o["customer"] == name:
+        if o["name"] == name:
             count = count + 1
     return count
 
 def total_price_by_customer(name):
     total = 0
     for o in orders:
-        if o["customer"] == name:
+        if o["name"] == name:
             total = total + (o["count"] * o["price"])
     return total
 
@@ -53,26 +53,26 @@ while True:
     print("2. 전체 주문 이력 보기")
     print("3. 고객별 주문 통계")
     print("4. 끝내기")
-    choice = input("옵션을 선택하세요: ")
+    select = input("옵션을 선택하세요: ")
 
-    if choice == "1":
-        customer = input("고객명: ")
+    if select == "1":
+        name = input("고객명: ")
         product  = input("제품명: ")
         count    = input("제품수량: ")
         price    = input("제품가격: ")
-        order = create_order(customer, product, count, price)
+        order = create_order(name, product, count, price)
         orders.append(order)
         print("주문이 완료되었습니다.")
 
-    elif choice == "2":
+    elif select == "2":
         list_all()
 
-    elif choice == "3":
+    elif select == "3":
         name = input("고객명: ")
         print("주문 건수:", count_by_customer(name))
         print("주문 금액:", total_price_by_customer(name))
 
-    elif choice == "4":
+    elif select == "4":
         print("프로그램을 종료합니다.")
         break
 
