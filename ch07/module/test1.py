@@ -1,9 +1,10 @@
-# 모듈 불러오기
+# import : 모듈 불러오는 명령어
 import mod1
 # print(mod1.add(3, 4))   # 7
 # print(mod1.sub(4, 2))   # 2
 
-# # 모듈에서 함수 하나만 가져오기
+# from-import 구조
+# from 모듈 import 함수 => 모듈에서 함수 하나만 가져오기
 # from mod1 import add
 # print(mod1.add(3,4)) # 모듈로 함수를 사용할 필요가 없음
 # print(add(3, 4)) # 함수 직접 사용 가능

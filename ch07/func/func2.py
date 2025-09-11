@@ -20,7 +20,7 @@ print(abs(-1.2))
 for i, name in enumerate(['body', 'foo', 'bar']):
     print(i, name) # 인덱스, 값
 
-# zip : 리스트나 튜플을 하나로 묶어주는 함수
+# zip : 리스트나 튜플을 하나로 묶기
 # 위치를 기반으로 값을 묶어줌
 seq1 = ["foo", "bar", "baz"]
 seq2 = ["one", "two", "three"]

@@ -1,11 +1,5 @@
-# 오류 회피하기
-# 오류가 발생해도 pass를 사용해서 통과시키기
-try:
-    f = open("나없는파일", 'r')
-except FileNotFoundError:
-    pass
+# raise : 오류를 일부러 발생시키는 명령어
 
-# # 오류 일부러 발생시키기
 # class Bird:
 #     def fly(self):
 #         raise NotImplementedError
