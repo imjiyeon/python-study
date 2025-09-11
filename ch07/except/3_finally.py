@@ -1,11 +1,11 @@
-# finally: 오류 발생 여부와 상관없이 항상 실행되는 블록
-# 항상 마지막에 배치
-
-# 보통 파일 닫기 같은 작업에 사용됨
+f = None
 try:
-    f = open("test.txt", 'w') 
+    f = open('test.txt', 'r')
+except FileNotFoundError as e:
+    print(e)
 finally:
-    f.close()
-    print('file close')
-
-print('프로그램이 정상적으로 종료되었습니다')
+    if f != None:
+        f.close()
+        print('파일을 닫습니다')
+    else:
+        print('파일이 존재하지 않습니다')

@@ -1,7 +1,7 @@
 #계산기
 
 # 클래스 만들기
-class Calculator:
+class Calc:
     # 클래스 변수 (공통 속성)
     type = "기본 계산기"
 
@@ -15,7 +15,7 @@ class Calculator:
         print("결과:", a - b)
 
 # 클래스로 객체 생성하기
-calc = Calculator('white')
+calc = Calc('white')
 
 # 클래스 객체 사용하기
 calc.add(10, 5)
@@ -23,8 +23,8 @@ calc.sub(10, 5)
 
 # 상속
 # Calculator를 상속받아 확장
-class newCalculator(Calculator):
-    calc_type = "고급 계산기" 
+class newCalculator(Calc):
+    calc_type = "공학용 계산기" 
 
     def mul(self, a, b):
         print("결과:", a * b)

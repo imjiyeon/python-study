@@ -17,6 +17,7 @@ print(abs(-3))
 print(abs(-1.2))
 
 # enumerate : 인덱스 붙이기
+print(enumerate(['body', 'foo', 'bar']))
 for i, name in enumerate(['body', 'foo', 'bar']):
     print(i, name) # 인덱스, 값
 
